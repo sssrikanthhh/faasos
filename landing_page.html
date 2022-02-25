@@ -376,7 +376,7 @@
         <div class="ls-input">
             <!-- <input value="+91"> -->
             <input type="number" placeholder="Enter OTP" id="lOTP">
-            <input type="submit" value="VERIFY" id="login-cont" onclick="goBackFromLogin()">
+            <input type="submit" value="VERIFY" id="login-cont" onclick="goBackHomePage()">
         </div>
         <p>Don’t have an account? <span id="goToSignup" onclick="goToSignup()">Sign up</span> </p>`;
         document.getElementById('lsdiv').innerHTML = content;
@@ -405,4 +405,8 @@
             }
         }
     }
+
+	function goBackHomePage(){
+		window.location.href = "./HomePage/index.html"
+	}
 </script>
