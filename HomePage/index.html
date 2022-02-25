@@ -5,10 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Food Online from Faasos in MG Road</title>
-    <link rel="stylesheet" href="main.css">
-  
+    <link rel="stylesheet" href="./style/main.css">
+    <!-- <style>
+        *{
+            margin: 0;
+        }
+        #navbar{
+            width: 100%;
+            height: 70px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+             /* border: 1px solid black; */
+        }
+        #left{
+            width: 40%;
+            height: 100%;
+            margin-left: 200px;
+            /* border: 1px solid black; */
+        }
+        #right{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            margin-left: 100px;
+            /* border: 1px solid black; */
+        }
+        #logo>img{
+            padding: 1%;
+            height: 80%;
+            width: 15%;
+        }
+        #profile{
+            margin-left: 300px;
+            width: 10%;
+            height: 100%;
+            /* border: 1px solid black; */
+        }
+        #profile>img{
+            padding: 3%;
+            height: 40%;
+            width: 70%;
+            margin-top: 20px;
+        }
+        #name{
+            margin-top: 25px;
+            color: rgb(104, 102, 102);
+        }
+        #toggle{
+            width: 20px;
+            height: 10px;
+            position: relative;
+            margin-top: 30px;
+            margin-left: 40px;
+            background: #000;
+        }
+        #toggle span{
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            border-radius: 2px;
+            top: 50%;
+            background: rgb(67, 67, 187);
+        }
+        #toggle span:nth-child(1){
+            top: 0;
+        }
+        #toggle span:nth-child(3){
+            top: 100%;
+        }
+        #nav{
+            width: 75%;
+            height: 49px;
+            border: 1px solid;
+            margin: auto;
+            position: static;
+        }
+        #lh{
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid red; */
+        }
+        #lh>p{
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 10px 10px 10px 0;
+        } 
+    </style> -->
 </head>
 <body>
+    <div id="navbar"></div>
     <div id="desk">
         <div id="loc">
             <form class="ex" action="">
@@ -96,17 +181,25 @@
     </div>
     
 </div>
+
+<div id="footer"></div>
 </body>
 </html>
 
-<!-- <script type="module" >
-    import navbar from "./componants/navbar.js"
+<script type="module" >
+    import navbar from "./componant/navbar.js"
 
     let navbar_div = document.getElementById("navbar");
     navbar_div.innerHTML = navbar();
-</script> -->
+</script>
 
+<script type="module">
+    import footer from "./componants/footer.js"
 
-<script src="index.js"></script>
+    let footer_div = document.getElementById("footer");
+    footer_div.innerHTML = footer();
+</script>
+
+<script src="./scripts/index.js"></script>
 
 
