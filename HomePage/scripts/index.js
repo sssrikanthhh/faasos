@@ -586,8 +586,8 @@ var Data = [];
    
     // var foodData = JSON.parse(localStorage.getItem("food-Data")) || [];
     var cartData = JSON.parse(localStorage.getItem("mainCart")) || [];
-    // console.log("cartData",cartData)
-    // console.log("Food_Data",foodData)
+    console.log("cartData",cartData)
+    console.log("Food_Data",foodData)
   
   
     function displayData (arr) {
@@ -677,9 +677,9 @@ var Data = [];
       
             div.append(div1,div2,div3,div4);
     
-            div.onclick = ()=>{
+            image.onclick = ()=>{
                 localStorage.setItem("clicked_Image",JSON.stringify(data));
-                window.location.href = "#"
+                window.location.href = "http://127.0.0.1:5500/product.html"
             }
             document.querySelector("#main").append(div);
         });
@@ -739,9 +739,6 @@ var Data = [];
                abc();
                localStorage.setItem("mainCart",JSON.stringify(Data)) ;
                
-            //    alert("item Deleted")
-            //    document.getElementById("remove").textContent = "Item Remove";
-            //    localStorage.setItem("mainCart",JSON.stringify(Data));
                printData(Data);
 
            })
@@ -765,7 +762,7 @@ var Data = [];
            return +a + +b.Price;
        },0)
    
-    //    console.log("x",x)
+       console.log("x",x)
        document.querySelector("#total").textContent = "SubTotal :"+ "₹"+ x ;
 
    }
@@ -786,7 +783,7 @@ veg_filter.oninput = () => {
         });
     }
     else{
-        // console.log(0);
+        console.log(0);
         window.location.href = "index.html";
     }
     console.log(veg_data);

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        #main {
+            width: 80%;
+            display: flex;
+            margin: auto;
+            margin-top: 5%;
+            /* border: 1px solid red; */
+        }
+
+        #left>img {
+            width: 95%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        #right_top {
+            border: 1px solid grey;
+        }
+
+        #title_rs {
+            display: flex;
+            height: 80px;
+            margin-left: 10px;
+            margin-right: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #rating_add {
+            display: flex;
+            height: 80px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: -40px;
+        }
+
+        #rating_add_bottom {
+            background-color: whitesmoke;
+        }
+
+        #mini {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-right: 15px;
+            color: gray;
+        }
+
+        #mini>p {
+            font-size: 16px;
+        }
+
+        #rating_add>p {
+            width: 60px;
+            height: 26px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        #rating_add>button {
+            width: 100px;
+            height: 30px;
+            margin-right: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            background-color: orange;
+        }
+
+        #right_bottom>p {
+            margin-top: 40px;
+            color: gray;
+        }
+
+        #bottom_btn {
+            display: block;
+            margin: auto;
+            margin-top: 25px;
+            width: 250px;
+            height: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: orange;
+        }
+
+        hr {
+            margin-top: 25px;
+        }
+
+        #top_left {
+            display: flex;
+            margin-left: 10%;
+            margin-bottom: -30px;
+            color: rgb(87, 87, 87);
+            align-items: center;
+        }
+
+        #bottom {
+            /* border: 1px solid red; */
+
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+    
+        <img src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt="">
+
+        <div id="location">
+
+        </div>
+        <div id="Login">
+            <div window.location.href="login-2.html" id="img"><img src="login.png" alt=""></div>
+            <div id="a"><a href="login-2.html">
+                    <p id ="namedetail" window.location.href="login-2.html">Vikash</p>
+                </a></div>
+        </div>
+    </div>
+    <div id="locationdesk">
+        <div id="locpage">
+            <form class="example" action="/action_page.php">
+                <input type="text" placeholder="Search Location" name="search">
+                <button id="btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            <hr style="color: grey;">
+        </div>
+    </div>
+    <div id="locationdesk1">
+
+    </div>
+
+    <input type="checkbox" id="opensidebar">
+    <label for="opensidebar" class="toggle">
+        <div class="spiner top"></div>
+        <div class="spiner middle"></div>
+        <div class="spiner bottom"></div>
+    </label>
+
+    <div id="sidebarMenu" style="display: flex;">
+
+        <ul class="menu">
+            <li></li>
+            <li class="li"><img src="profile.png" alt=""><a href="profile.html">Profile</a></li>
+            <li class="li"><img src="manage.png" alt=""><a href="order.html">Manage Orders</a></li>
+            <li class="li"><img src="ad.png" alt=""><a href="profile.html">Manage Addresses</a></li>
+            <li class="li"><img src="payment.png" alt=""><a href="paymoney.html">Manage Payments</a></li>
+            <li class="li"><img src="help.png" alt=""><a href="#">Help & Support</a></li>
+            <li class="li"><img src="about.png" alt=""><a href="#">About Us</a></li>
+            <li class="li"><img src="party.png" alt=""><a href="#">Party Orders</a></li>
+            <li class="li"><img src="logout.png" alt=""><a href="#" t>Logout</a></li>
+        </ul>
+
+    </div>
+
+
+
+
+
+    <div id="top_left">
+        <p>Home / Collection /</p>
+    </div>
+
+    <div id="main">
+        <div id="left"></div>
+        <div id="right">
+            <div id="right_top">
+                <div id="title_rs"></div>
+                <div id="rating_add_bottom">
+                    <div id="rating_add"></div>
+                    <div id="mini">
+                        <p>601 bought this</p>
+                        <p>Customizable</p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div id="right_bottom">
+                <div id="des_cat"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom" onclick="window.location.href='delivery.html'"></div>
+</body>
+
+</html>
+
+<script src="./product.js"></script>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+   <link rel="stylesheet" href="ordercss/order.css">
+   <style>
+#orderpage>img{
+    padding: 0;
+    margin-right: 0px;
+    height: 200px;
+    border: 1px solid blue;
+    margin-left: 1000px;
+}
+
+
+   </style>
+</head>
+
+<body>
+    <div class="header">
+    
+        <img src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt="">
+
+        <div id="location">
+
+        </div>
+        <div id="Login">
+            <div window.location.href="login-2.html" id="img"><img src="login.png" alt=""></div>
+            <div id="a"><a href="login-2.html">
+                    <p id ="namedetail" window.location.href="login-2.html">Vikash</p>
+                </a></div>
+        </div>
+    </div>
+    <div id="locationdesk">
+        <div id="locpage">
+            <form class="example" action="/action_page.php">
+                <input type="text" placeholder="Search Location" name="search">
+                <button id="btn" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            <hr style="color: grey;">
+        </div>
+    </div>
+    <div id="locationdesk1">
+
+    </div>
+
+    <input type="checkbox" id="opensidebar">
+    <label for="opensidebar" class="toggle">
+        <div class="spiner top"></div>
+        <div class="spiner middle"></div>
+        <div class="spiner bottom"></div>
+    </label>
+
+    <div id="sidebarMenu" style="display: flex;">
+
+        <ul class="menu">
+            <li></li>
+            <li class="li"><img src="profile.png" alt=""><a href="profile.html">Profile</a></li>
+            <li class="li"><img src="manage.png" alt=""><a href="order.html">Manage Orders</a></li>
+            <li class="li"><img src="ad.png" alt=""><a href="profile.html">Manage Addresses</a></li>
+            <li class="li"><img src="payment.png" alt=""><a href="paymoney.html">Manage Payments</a></li>
+            <li class="li"><img src="help.png" alt=""><a href="#">Help & Support</a></li>
+            <li class="li"><img src="about.png" alt=""><a href="#">About Us</a></li>
+            <li class="li"><img src="party.png" alt=""><a href="#">Party Orders</a></li>
+            <li class="li"><img src="logout.png" alt=""><a href="#" t>Logout</a></li>
+        </ul>
+
+    </div>
+
+
+</div>
+    <div id="container">
+        <div id="head">
+            <div id="pic"><img src="mug.png" alt=""></div>
+            <div id="cred">
+                <div class="cred" id="credname">
+                       <h2>Vikash</h2>
+                       <p>7488027671</p>
+                       <p>VikashXXXXXX</p>
+                </div>
+                <!-- <div class="cred" id="credno">
+                 
+                </div>
+                <div class="cred" id="credemail"></div> -->
+            </div>
+        </div>
+        <div  class="wrap" id="profilewrap">
+            <div  class="wrap" id="wrapprofile">Profile</div>
+            <div  class="wrap" id="wraporder">Orders</div>
+            <div  class="wrap" id="wrappayment">Payments</div>
+            <div  class="wrap" id="wrapad">Addresses</div>
+        </div>
+        <hr >
+        <div id="profilepage">
+    </div>
+    <div id="paymentpage"></div>
+    <div id="orederpage" style=" height:342px;">
+       <img src="pastorder.png" alt="">
+    </div>
+    <div id="addresspage"></div>
+       
+    
+</body>
+
+</html>
+<!-- <script type="module">
+    import navbar from "./navjs/nav.js"
+    console.log(navbar())
+    var nav = document.querySelector(".header")
+    nav.innerHTML = navbar()
+
+</script> -->
+
+<script>
+    var x =document.querySelector("#wraporder")
+    x.addEventListener("click",function(){
+        var y =document.querySelector("#wraporder")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+        var addresspage =document.querySelector("#addresspage")
+
+var wrapad =document.querySelector("#wrapad")
+wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        // var addresspage=document.querySelector("#addresspage")
+        
+        // var wrapad=document.querySelector("#wrapad")
+        // wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        //  addresspage.style.cssText="visibility:hidden"
+
+
+              var profilepage =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+         profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+         profilepage.style.cssText="visibility:hidden"
+
+    })
+    // *************************************
+    var profilename =document.querySelector("#wrapprofile")
+    profilename.addEventListener("click",function(){
+        
+        var y =document.querySelector("#wrapprofile")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+
+        // var x =document.querySelector("#profilepage")
+        // var profilename =document.querySelector("#wrapprofile")
+        // profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        // x.style.cssText="visibility:hidden"
+
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+        var x =document.querySelector("#profilepage")
+        x.style.cssText="visibility:visible"
+        var ordername =document.querySelector("#wraporder")
+      ordername.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+      displayprofile()
+
+    })
+
+
+    function displayprofile(){
+        console.log("ughfsufsdf")
+        document.querySelector("#profilepage").innerHTML=" "
+        document.querySelector("#paymentpage").innerHTML=" "
+        var profilepage =document.querySelector("#profilepage")
+
+        // <!-- <div id="procon">
+        //     <p id="manage">Manage Profile</p>
+        // </div>
+        
+        var procon = document.createElement("div")
+        procon.id="procon"
+
+        // var procon = document.createElement("div")
+        // procon.id="procon"
+        // var manage =document.createElement("p")
+        // manage.id="manage"
+        // manage.textContent="Manage Profile"
+        // procon.append(manage)
+
+        var procred = document.createElement("div")
+        procred.id="procred"
+        // var procred =document.querySelector("#procred")
+        var manage = document.createElement("p")
+        manage.id="manage"
+        manage.textContent="Manage Profile"
+        // var manage = document.querySelector("#manage")
+        procon.append(manage)
+        var procred1 = document.createElement("div")
+        procred1.id="procred1"
+        // var procred1 =document.querySelector("#procred1")
+        var bigmug = document.createElement("img")
+        bigmug.src="bigmug.png"
+        bigmug.id="procred1"
+        // var bigmug =document.querySelector("#bigmug")
+        procred1.append(bigmug)
+        var procred2 = document.createElement("div")
+        procred2.id="procred2"
+        // var procred2 =document.querySelector("#procred2")
+        var title= document.createElement("div")
+        title.id="title"
+        title.className="procred2"
+        
+        // var title =document.querySelector("#title")
+
+        var onlytitle =document.createElement("p")
+        onlytitle.textContent="Title"
+    
+        var name =document.createElement("p")
+        name.textContent="Vikash"
+
+
+        // var phone =document.querySelector("#phone")
+        var phone= document.createElement("div")
+        phone.id="phone"
+        phone.className="procred2"
+        var phonename =document.createElement("p")
+        phonename.textContent="Phone no"
+        var number =document.createElement("p")
+        number.textContent="7488027671"
+
+        var mail= document.createElement("div")
+        mail.id="mail"
+        mail.className="procred2"
+        // var mail =document.querySelector("#mail")
+
+        var emailname =document.createElement("p")
+       emailname.textContent="Email"
+        var email =document.createElement("p")
+        email.textContent="vikashxxxxx@gmail.com"
+
+    mail.append(emailname,email)
+    phone.append(phonename,number)
+    title.append(onlytitle,name)
+    procred2.append(title,phone,mail)
+    procred.append(procred1,procred2)
+    profilepage.append(procon,procred)
+    }
+    // *************************************
+    var paymentname =document.querySelector("#wrappayment")
+    paymentname.addEventListener("click",function(){
+        console.log("dfds")
+        // dispalypic()
+        var paymentpage =document.querySelector("#paymentpage")
+        paymentpage.style.cssText="visibility:visible"
+
+        var y =document.querySelector("#wrappayment")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var x =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+        profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        x.style.cssText="visibility:hidden"
+        
+
+
+    //     var x =document.querySelector("#profilepage")
+    //     x.style.cssText="visibility:visible"
+    //     var ordername =document.querySelector("#wraporder")
+    //   ordername.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+    var orderpage =document.querySelector("#orderpage")
+        var profilename =document.querySelector("#wraporder")
+        profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+    //    orderpage.style.cssText="visibility:hidden"
+
+    dispalypic()
+
+    })
+function dispalypic(){
+    console.log("sdfsdfas")
+    document.querySelector("#profilepage").innerHTML=" "
+    // document.querySelector("#paymentpage").
+    let div=document.createElement("div")
+    let image=document.createElement("img")
+    image.src="nolink.png"
+    image.style.cssText='  margin-left: 40%;width: 500px;height: 400px;'
+    div.append(image)
+    document.querySelector("#paymentpage").append(div)
+
+  
+}
+// *******************************
+// address javascript
+var wrapad =document.querySelector("#wrapad")
+wrapad.addEventListener("click",function(){
+        var y =document.querySelector("#wrapad")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+              var profilepage =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+         profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+         profilepage.style.cssText="visibility:hidden"
+
+    //      var addresspage =document.querySelector("#addresspage")
+    // var wrapad =document.querySelector("#wrapad")
+    // wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    var ordername =document.querySelector("#wraporder")
+      ordername.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    })
+
+
+
+
+
+
+
+</script>
