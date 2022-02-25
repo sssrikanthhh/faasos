@@ -580,7 +580,7 @@ var foodData = [{
 
 
 
-var data = [];
+var Data = [];
 
 // main data 
    
@@ -679,7 +679,7 @@ var data = [];
     
             image.onclick = ()=>{
                 localStorage.setItem("clicked_Image",JSON.stringify(data));
-                window.location.href = "http://127.0.0.1:5500/product.html"
+                window.location.href = "../product.html"
             }
             document.querySelector("#main").append(div);
         });
