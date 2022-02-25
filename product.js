@@ -9,6 +9,7 @@
 //     },
 // ];
 
+// <<<<<<< HEAD
 document.getElementById("imgDiv");
 imgDiv.onclick= ()=>{
     localStorage.getItem("clicked_Image")
@@ -16,6 +17,11 @@ imgDiv.onclick= ()=>{
     alert("Added to cart");
     window.location.href = "./HomePage.index.html";
   
+document.querySelector("#imgDiv").addEventListener("click", function () {
+    // alert("Added to cart");
+    // window.location.href = "./HomePage/index.html";
+  });
+// >>>>>>> 2e9d9bbc23bfd92d77c5e6492314262fac016a59
 
 var displayData = JSON.parse(localStorage.getItem("clicked_Image"))
 
@@ -57,10 +63,10 @@ displayData.map(function (item) {
 
     //right_bottom
     var detail = document.createElement("p");
-    detail.textContent = item.des;
+    detail.textContent = `Veg Only) 1 Masala Paneer Tikka Wrap + 1 Jumbo Falafel Salsa Wrap . When flavourful surprises come knocking, you welcome them with open arms.`;
 
     var cat = document.createElement("h3");
-    cat.innerHTML = item.cat;
+    cat.innerHTML = item.tags;
 
     document.getElementById("top_left").append(top_left);
 
