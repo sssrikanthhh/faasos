@@ -1,3 +1,3 @@
 # Faasos
 
-This is a clone of a faasos food delivery website called faasos.
+This is a clone of a food delivery website called faasos.
