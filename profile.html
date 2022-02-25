@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <!-- <link rel="stylesheet" href="navlogincss/navlogin.css"> -->
+    <style>
+        body{
+            background-color:rgb(245,245,246);
+        }
+        
+        #container {
+            margin: 0;
+            padding: 0;
+        }
+     
+        #head {
+
+            background-image: linear-gradient(99deg, rgb(255, 211, 68) -3%, rgb(230, 178, 9) 111%);
+            display: flex;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            /* justify-content: center; */
+            -webkit-box-align: center;
+            align-items: center;
+            min-height: 23rem;
+            width: 99%;
+
+
+        }
+
+        #pic {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            margin-left: 400px;
+            margin-top: 100px;
+
+        }
+
+        #pic>img {
+            width: 150px;
+            height: 150px;
+        }
+        #cred{
+            margin: 0;
+            padding: 0;
+            /* display: block; */
+            width: 100%;
+            /* border:1px solid black ; */
+            height: 170px;
+            margin-top: 92px;
+            display: grid;
+
+        }
+        /* .cred{ */
+            /* border: 1px  solid red; */
+          /* padding: 0;
+          margin: 0; */
+        /* } */
+        .cred>h2{
+            margin-top: 45px;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        .cred>p{
+            margin-top: 8px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            color: rgb(109, 109, 109);
+            font-size: 20px;
+        }
+        
+        #profilewrap {
+  
+    white-space: nowrap;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom:0px;
+    height: 100px;
+    background-color:rgb(245,245,246);
+    width: 80%;
+    margin-left: 10%;
+
+}
+#wrapprofile {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    border-bottom: 0.3rem solid rgb(86, 64, 153);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+    border-top-color: rgb(86, 64, 153);
+    border-right-color: rgb(86, 64, 153);
+    border-left-color: rgb(86, 64, 153);
+    color: rgb(86, 64, 153);
+    font-weight: 700;
+}
+#wraporder {
+    font-size: 1.6rem;
+    color: rgb(100, 100, 100);
+    transition: all 0.5s ease 0s;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+}
+#wrappayment {
+    font-size: 1.6rem;
+    color: rgb(100, 100, 100);
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+}
+#wrapad {
+    font-size: 1.6rem;
+    color: rgb(100, 100, 100);
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease 0s;
+}
+#procon{
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 600px; */
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    background-color:rgb(245,245,246);
+   
+}
+hr{
+    margin: 0;
+    border: 0.5px solid rgba(128, 128, 128, 0.733);
+}
+#procon>p{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 540;
+    margin-left: 189px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  
+}
+#procred{
+    padding: 0;
+    margin: 0;
+   
+    height: 370px;
+    width: 80%;
+    margin-left: 10%;
+    background-color:rgb(245,245,246);
+    display: grid;
+    grid-template-columns: 20% 79.35%;
+    column-gap: 12px;
+    /* margin-bottom: 50000px; */
+
+}
+#procred>div{
+    padding: 0;
+    margin: 0;
+}
+
+
+#procred1>img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.procred2>p{
+    margin: 0;
+    padding: 0;
+
+}
+#procred2{
+    display: grid;
+    grid-template-rows: (3,1fr);
+    row-gap: 12px;
+ 
+  
+}
+#title{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+#phone{
+    
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+#mail{
+    
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.procred2>p:nth-child(1){
+    color: grey;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.procred2>p:nth-child(2){
+    color: rgb(0, 0, 0);
+    font-weight: 750;
+    font-size: 30px;
+    margin-left: 50px;
+    /* margin-top: 30px; */
+}
+#profilepage{
+    position: relative;
+    transform: translateX(800x);
+    transition: transform 0ms ease-in-out;
+}
+#wraporder:target{
+    color: red;
+}
+/* #paymentpage>div>img{
+ 
+
+} */
+#paymentpage{
+    height: 100px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+    
+            <img src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt="">
+
+            <div id="location">
+
+            </div>
+            <div id="Login">
+                <div window.location.href="login-2.html" id="img"><img src="login.png" alt=""></div>
+                <div id="a"><a href="login-2.html">
+                        <p id ="namedetail" window.location.href="#">Vikash</p>
+                    </a></div>
+            </div>
+        </div>
+        <div id="locationdesk">
+            <div id="locpage">
+                <form class="example" action="/action_page.php">
+                    <input type="text" placeholder="Search Location" name="search">
+                    <button id="btn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+                <hr style="color: grey;">
+            </div>
+        </div>
+        <div id="locationdesk1">
+
+        </div>
+
+        <input type="checkbox" id="opensidebar">
+        <label for="opensidebar" class="toggle">
+            <div class="spiner top"></div>
+            <div class="spiner middle"></div>
+            <div class="spiner bottom"></div>
+        </label>
+
+        <div id="sidebarMenu" style="display: flex;">
+
+            <ul class="menu">
+                <li></li>
+                <li class="li"><img src="profile.png" alt=""><a href="profile.html">Profile</a></li>
+                <li class="li"><img src="manage.png" alt=""><a href="order.html">Manage Orders</a></li>
+                <li class="li"><img src="ad.png" alt=""><a href="profile.html">Manage Addresses</a></li>
+                <li class="li"><img src="payment.png" alt=""><a href="paymoney.html">Manage Payments</a></li>
+                <li class="li"><img src="help.png" alt=""><a href="#">Help & Support</a></li>
+                <li class="li"><img src="about.png" alt=""><a href="#">About Us</a></li>
+                <li class="li"><img src="party.png" alt=""><a href="#">Party Orders</a></li>
+                <li class="li"><img src="logout.png" alt=""><a href="#" t>Logout</a></li>
+            </ul>
+
+        </div>
+
+    
+    </div>
+    <div id="container">
+        <div id="head">
+            <div id="pic"><img src="mug.png" alt=""></div>
+            <div id="cred">
+                <div class="cred" id="credname">
+                       <h2>Vikash</h2>
+                       <p>7488027671</p>
+                       <p>VikashXXXXXX</p>
+                </div>
+                <!-- <div class="cred" id="credno">
+                 
+                </div>
+                <div class="cred" id="credemail"></div> -->
+            </div>
+        </div>
+        <div  class="wrap" id="profilewrap">
+            <div  class="wrap" id="wrapprofile">Profile</div>
+            <div  class="wrap" id="wraporder">Orders</div>
+            <div  class="wrap" id="wrappayment">Payments</div>
+            <div  class="wrap" id="wrapad">Addresses</div>
+        </div>
+        <hr >
+        <div id="profilepage">
+        <!-- <div id="procon">
+            <p id="manage">Manage Profile</p>
+        </div>
+        <div id="procred" >
+            <div class="procred" id="procred1">
+                <img id="bigmug" src="bigmug.png" alt="">
+            </div>
+            <div  class="procred" id="procred2">
+                <div class="procred2" id="title" >
+                    <p>Title</p>
+                    <p></p>
+                </div>
+                <div class="procred2" id="phone"> 
+                    <p>Phone no</p>
+                    <p></p></div>
+                <div class="procred2" id="mail"> 
+                    <p>Email</p>
+                    <p>Vikashxxxxx@gmail.com</p></div>
+            </div>
+        </div> -->
+    </div>
+    <div id="paymentpage">
+        <!-- <div><img src="nolink.png" alt=""></div>
+    </div> -->
+    <div id="orederpage"></div>
+        <div style="height: 80px;"></div>
+    </div>
+    <div id="addresspage"></div>
+</body>
+
+</html>
+<!-- <script type="module">
+    import navbar from "./navjs/nav.js"
+    console.log(navbar())
+    var nav = document.querySelector(".header")
+    nav.innerHTML = navbar()
+
+</script> -->
+
+<script>
+    var x =document.querySelector("#wraporder")
+    x.addEventListener("click",function(){
+        var y =document.querySelector("#wraporder")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+              var profilepage =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+         profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+         profilepage.style.cssText="visibility:hidden"
+
+         var addresspage =document.querySelector("#addresspage")
+    var wrapad =document.querySelector("#wrapad")
+    wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    })
+    // *************************************
+    var profilename =document.querySelector("#wrapprofile")
+    profilename.addEventListener("click",function(){
+        
+        var y =document.querySelector("#wrapprofile")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+
+        // var x =document.querySelector("#profilepage")
+        // var profilename =document.querySelector("#wrapprofile")
+        // profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        // x.style.cssText="visibility:hidden"
+
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+        var x =document.querySelector("#profilepage")
+        x.style.cssText="visibility:visible"
+        var ordername =document.querySelector("#wraporder")
+      ordername.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+
+      var addresspage =document.querySelector("#addresspage")
+    var wrapad =document.querySelector("#wrapad")
+    wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+      displayprofile()
+
+    })
+
+
+    function displayprofile(){
+        document.querySelector("#profilepage").innerHTML=" "
+        document.querySelector("#paymentpage").innerHTML=" "
+        var profilepage =document.querySelector("#profilepage")
+
+        // <!-- <div id="procon">
+        //     <p id="manage">Manage Profile</p>
+        // </div>
+        
+        var procon = document.createElement("div")
+        procon.id="procon"
+
+        // var procon = document.createElement("div")
+        // procon.id="procon"
+        // var manage =document.createElement("p")
+        // manage.id="manage"
+        // manage.textContent="Manage Profile"
+        // procon.append(manage)
+
+        var procred = document.createElement("div")
+        procred.id="procred"
+        // var procred =document.querySelector("#procred")
+        var manage = document.createElement("p")
+        manage.id="manage"
+        manage.textContent="Manage Profile"
+        // var manage = document.querySelector("#manage")
+        procon.append(manage)
+        var procred1 = document.createElement("div")
+        procred1.id="procred1"
+        // var procred1 =document.querySelector("#procred1")
+        var bigmug = document.createElement("img")
+        bigmug.src="bigmug.png"
+        bigmug.id="procred1"
+        // var bigmug =document.querySelector("#bigmug")
+        procred1.append(bigmug)
+        var procred2 = document.createElement("div")
+        procred2.id="procred2"
+        // var procred2 =document.querySelector("#procred2")
+        var title= document.createElement("div")
+        title.id="title"
+        title.className="procred2"
+        
+        // var title =document.querySelector("#title")
+
+        var onlytitle =document.createElement("p")
+        onlytitle.textContent="Title"
+    
+        var name =document.createElement("p")
+        name.textContent="Vikash"
+
+
+        // var phone =document.querySelector("#phone")
+        var phone= document.createElement("div")
+        phone.id="phone"
+        phone.className="procred2"
+        var phonename =document.createElement("p")
+        phonename.textContent="Phone no"
+        var number =document.createElement("p")
+        number.textContent="7488027671"
+
+        var mail= document.createElement("div")
+        mail.id="mail"
+        mail.className="procred2"
+        // var mail =document.querySelector("#mail")
+
+        var emailname =document.createElement("p")
+       emailname.textContent="Email"
+        var email =document.createElement("p")
+        email.textContent="vikashxxxxx@gmail.com"
+
+    mail.append(emailname,email)
+    phone.append(phonename,number)
+    title.append(onlytitle,name)
+    procred2.append(title,phone,mail)
+    procred.append(procred1,procred2)
+    profilepage.append(procon,procred)
+    }
+    // *************************************
+    var paymentname =document.querySelector("#wrappayment")
+    paymentname.addEventListener("click",function(){
+        console.log("dfds")
+        // dispalypic()
+        var paymentpage =document.querySelector("#paymentpage")
+        paymentpage.style.cssText="visibility:visible"
+
+        var y =document.querySelector("#wrappayment")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var x =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+        profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        x.style.cssText="visibility:hidden"
+        
+    var orderpage =document.querySelector("#orderpage")
+        var profilename =document.querySelector("#wraporder")
+        profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    var addresspage =document.querySelector("#addresspage")
+
+        var wrapad =document.querySelector("#wrapad")
+        wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+    //    orderpage.style.cssText="visibility:hidden"
+
+    dispalypic()
+
+    })
+function dispalypic(){
+    console.log("sdfsdfas")
+    document.querySelector("#profilepage").innerHTML=" "
+    // document.querySelector("#paymentpage").
+    let div=document.createElement("div")
+    let image=document.createElement("img")
+    image.src="nolink.png"
+    image.style.cssText='  margin-left: 40%;width: 500px;height: 400px;'
+    div.append(image)
+    document.querySelector("#paymentpage").append(div)
+
+     
+
+}
+
+// profile show when we will click script
+
+function displaywhenclick(){
+        console.log("ughfsufsdf")
+        document.querySelector("#profilepage").innerHTML=" "
+        document.querySelector("#paymentpage").innerHTML=" "
+        var profilepage =document.querySelector("#profilepage")
+
+        // <!-- <div id="procon">
+        //     <p id="manage">Manage Profile</p>
+        // </div>
+        
+        var procon = document.createElement("div")
+        procon.id="procon"
+
+        // var procon = document.createElement("div")
+        // procon.id="procon"
+        // var manage =document.createElement("p")
+        // manage.id="manage"
+        // manage.textContent="Manage Profile"
+        // procon.append(manage)
+
+        var procred = document.createElement("div")
+        procred.id="procred"
+        // var procred =document.querySelector("#procred")
+        var manage = document.createElement("p")
+        manage.id="manage"
+        manage.textContent="Manage Profile"
+        // var manage = document.querySelector("#manage")
+        procon.append(manage)
+        var procred1 = document.createElement("div")
+        procred1.id="procred1"
+        // var procred1 =document.querySelector("#procred1")
+        var bigmug = document.createElement("img")
+        bigmug.src="bigmug.png"
+        bigmug.id="procred1"
+        // var bigmug =document.querySelector("#bigmug")
+        procred1.append(bigmug)
+        var procred2 = document.createElement("div")
+        procred2.id="procred2"
+        // var procred2 =document.querySelector("#procred2")
+        var title= document.createElement("div")
+        title.id="title"
+        title.className="procred2"
+        
+        // var title =document.querySelector("#title")
+
+        var onlytitle =document.createElement("p")
+        onlytitle.textContent="Title"
+    
+        var name =document.createElement("p")
+        name.textContent="Vikash"
+
+
+        // var phone =document.querySelector("#phone")
+        var phone= document.createElement("div")
+        phone.id="phone"
+        phone.className="procred2"
+        var phonename =document.createElement("p")
+        phonename.textContent="Phone no"
+        var number =document.createElement("p")
+        number.textContent="7488027671"
+
+        var mail= document.createElement("div")
+        mail.id="mail"
+        mail.className="procred2"
+        // var mail =document.querySelector("#mail")
+
+        var emailname =document.createElement("p")
+       emailname.textContent="Email"
+        var email =document.createElement("p")
+        email.textContent="vikashxxxxx@gmail.com"
+
+    mail.append(emailname,email)
+    phone.append(phonename,number)
+    title.append(onlytitle,name)
+    procred2.append(title,phone,mail)
+    procred.append(procred1,procred2)
+    profilepage.append(procon,procred)
+    }
+    displaywhenclick()
+
+// *********************************
+// adress javsrcipt
+
+var wrapad =document.querySelector("#wrapad")
+wrapad.addEventListener("click",function(){
+        var y =document.querySelector("#wrapad")
+        y.style.cssText='font-size: 1.6rem;text-align: center;padding: 1.5rem 1.2rem;border-bottom: 0.3rem solid rgb(86, 64, 153);cursor: pointer;width: 100%;transition: all 0.5s ease 0s;border-top-color: rgb(86, 64, 153);border-right-color: rgb(86, 64, 153);border-left-color: rgb(86, 64, 153); color: rgb(86, 64, 153);font-weight: 600'
+        var paymentpage =document.querySelector("#paymentpage")
+        var paymentname =document.querySelector("#wrappayment")
+        paymentname.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+        paymentpage.style.cssText="visibility:hidden"
+
+
+              var profilepage =document.querySelector("#profilepage")
+        var profilename =document.querySelector("#wrapprofile")
+         profilename.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+         profilepage.style.cssText="visibility:hidden"
+
+    //      var addresspage =document.querySelector("#addresspage")
+    // var wrapad =document.querySelector("#wrapad")
+    // wrapad.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    var ordername =document.querySelector("#wraporder")
+      ordername.style.cssText=' font-size: 1.6rem;color: rgb(100, 100, 100);font-weight: 500;border:none'
+
+    })
+
+
+
+      // get local storage name from here and append here
+
+document.getElementById("namedetail").innerHTML=""
+</script>
