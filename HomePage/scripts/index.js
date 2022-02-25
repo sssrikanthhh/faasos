@@ -677,9 +677,9 @@ var Data = [];
       
             div.append(div1,div2,div3,div4);
     
-            div.onclick = ()=>{
+            image.onclick = ()=>{
                 localStorage.setItem("clicked_Image",JSON.stringify(data));
-                window.location.href = "#"
+                window.location.href = "http://127.0.0.1:5500/product.html"
             }
             document.querySelector("#main").append(div);
         });
