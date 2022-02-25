@@ -1,47 +1,41 @@
-displayData = [
-    {
-        name: `Shiva`,
-        number: `7038020143`,
-    },
-];
+var loginDetails = JSON.parse(localStorage.getItem("lsUserData"))
+displayData(loginDetails)
+var displayData2 = JSON.parse(localStorage.getItem("clicked_Image"))
+// console.log('displayData:', displayData)
+// console.log('data:', data)
+displayData2a(displayData2)
+// console.log('data:', data)
 
-displayData2 = [
-    {
-        title: `Smokey Fab Combo (Veg)`,
-        price: 255,
-    },
-];
-
-displayData.map(function (ele) {
+function displayData(ele) {
     var fix = document.createElement("h3");
     fix.innerHTML = "Logged in";
 
     let div = document.createElement("div");
 
     var title = document.createElement("h3");
-    title.innerHTML = ele.name;
+    title.innerHTML = ele[0].lsName;
 
     var mobile = document.createElement("h3");
-    mobile.innerHTML = ` | ${ele.number}`;
+    mobile.innerHTML = ` | ${ele[0].lsNumber}`;
 
     div.append(title, mobile);
     document.querySelector("#login").append(fix, div);
-});
+};
 
 
-displayData2.map(function (item) {
+function displayData2a(item) {
     var prod = document.createElement("p");
-    prod.innerHTML = item.title;
+    prod.innerHTML = item.food_name;
 
     var mrp = document.createElement("p");
-    mrp.innerHTML = `₹ ${item.price}`;
+    mrp.innerHTML = `₹ ${item.Price}`;
 
     var div1 = document.createElement("div")
     var div1a = document.createElement("p")
     div1a.innerHTML = "Card Amount"
 
     var div1b = document.createElement("p")
-    div1b.innerHTML = `₹ ${item.price}`
+    div1b.innerHTML = `₹ ${item.Price}`
 
     var div2 = document.createElement("div")
     var div2a = document.createElement("p")
@@ -59,7 +53,7 @@ displayData2.map(function (item) {
     div3b.id = "FreeItem"
 
     var total = document.createElement("h3")
-    total.innerHTML = `₹ ${item.price - 12}`
+    total.innerHTML = `₹ ${item.Price - 12}`
 
     div1.append(div1a, div1b)
     div2.append(div2a, div2b)
@@ -68,4 +62,4 @@ displayData2.map(function (item) {
     document.querySelector("#final").append(div1, div2, div3)
 
     document.querySelector("#total").append(total)
-});
+};

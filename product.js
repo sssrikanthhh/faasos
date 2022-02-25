@@ -2,9 +2,9 @@
 
 var data = JSON.parse(localStorage.getItem("clicked_Image"))
 console.log('displayData:', displayData)
-console.log('data:', data)
+// console.log('data:', data)
 displayData(data)
-console.log('data:', data)
+// console.log('data:', data)
 
 
 function displayData(item) {
