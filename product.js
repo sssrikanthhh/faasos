@@ -1,20 +1,20 @@
-displayData = [
-    {
-        img_url: `https://product-assets.faasos.io/production/product/image_1618580131789_image_1618219032186_Fab%20%26%20Smokey%20Veg%20Combo%201%20Masala%20Paneer%20tikka%2B%201%20Jumbo%20Falafel%20Salsa%20Wrap.jpg`,
-        food_name: `Smokey Fab Combo(Veg)`,
-        Price: 209,
-        des: `Veg Only) 1 Masala Paneer Tikka Wrap + 1 Jumbo Falafel Salsa Wrap . When flavourful surprises come knocking, you welcome them with open arms. Especially when they come with savings of Rs.137!
-      Read More`,
-        cat: `Rolls`,
-    },
-];
+// displayData = [
+//     {
+//         img_url: `https://product-assets.faasos.io/production/product/image_1618580131789_image_1618219032186_Fab%20%26%20Smokey%20Veg%20Combo%201%20Masala%20Paneer%20tikka%2B%201%20Jumbo%20Falafel%20Salsa%20Wrap.jpg`,
+//         food_name: `Smokey Fab Combo(Veg)`,
+//         Price: 209,
+//         des: `Veg Only) 1 Masala Paneer Tikka Wrap + 1 Jumbo Falafel Salsa Wrap . When flavourful surprises come knocking, you welcome them with open arms. Especially when they come with savings of Rs.137!
+//       Read More`,
+//         cat: `Rolls`,
+//     },
+// ];
 
-// document.querySelector("button").addEventListener("click", function () {
-//     alert("Added to cart");
-//     window.location.href = "cart.html";
-//   });
+document.querySelector("button").addEventListener("click", function () {
+    alert("Added to cart");
+    window.location.href = "./HomePage/index.html";
+  });
 
-// var displayData = JSON.parse(localStorage.getItem("clicked_image"))
+var displayData = JSON.parse(localStorage.getItem("clicked_Image"))
 
 displayData.map(function (item) {
     //top_left
@@ -54,10 +54,10 @@ displayData.map(function (item) {
 
     //right_bottom
     var detail = document.createElement("p");
-    detail.textContent = item.des;
+    detail.textContent = `Veg Only) 1 Masala Paneer Tikka Wrap + 1 Jumbo Falafel Salsa Wrap . When flavourful surprises come knocking, you welcome them with open arms.`;
 
     var cat = document.createElement("h3");
-    cat.innerHTML = item.cat;
+    cat.innerHTML = item.tags;
 
     document.getElementById("top_left").append(top_left);
 
