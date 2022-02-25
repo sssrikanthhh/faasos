@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        #done {
+            display: block;
+            margin: auto;
+            background-color: orange;
+        }
+
+        #container {
+            width: 50%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container">
+
+        <div>
+            <h3>Shipping Address:-</h3>
+        </div>
+
+        <label for="name">First Name</label>
+        <input id="name1" type="text" class="form-control" placeholder="Enter first name">
+
+        <div class="col">
+            <label for="name">Last Name</label>
+            <input id="name2" type="text" class="form-control" placeholder="Enter last name">
+
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <label for="email">Email</label>
+                <input id="mail" type="text" class="form-control" placeholder="xyz@example.com">
+            </div>
+        </div>
+
+        <div class="row">
+            <label for="username">Contact Number</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">+91</div>
+                </div>
+                <input id="mobile" type="text" class="form-control" placeholder="Enter mobile number">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="address">Address</label>
+                <input id="add" type="text" class="form-control" placeholder="Enter address here">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="address">Landmark</label>
+                <input id="Land" type="text" class="form-control" placeholder="Enter Landmark">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-md-3">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option id="State" value="1">Maharashtra</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputZip">Zip Code</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputState">Country...</label>
+            <select id="Country" class="form-control">
+                <option selected>Choose...</option>
+                <option value="1">India</option>
+                <option value="2">Brazil</option>
+                <option value="3">Germany</option>
+            </select>
+        </div>
+
+        <hr>
+        <button id="done" onclick="window.location.href='delivery.html'">Done</button>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+document.getElementById("form").addEventListener("submit", formsubmit)
+
+function formsubmit(event){
+    event.preventDefault()
+    var Fname = document.getElementById("name1").value
+    var Lname = document.getElementById("name2").value
+
+    var email = document.getElementById("mail").value
+    var number = document.getElementById("mobile").value
+
+    var adds = document.getElementById("add").value
+    var Landmrk = document.getElementById("Land").value
+
+    var state = document.getElementById("State").value
+    var areacode = document.getElementById("inputZip").value
+    var country = document.getElementById("Country").value
+
+    let userdetails = JSON.parse(localStorage.getItem("form")) || []
+
+}
+    
+    let address = [
+        {
+           Firstname: Fname,
+            Lastname: Lname,
+            Email: email,
+            Mobile: number,
+            Adds: adds,
+            Location: Landmrk,
+            State : state,
+            Code: areacode,
+            Country : country
+
+        }
+    ]
+
+    userdetails.push(address)
+
+    localStorage.setItem("form", JSON.stringify(address))
+
+</script>
