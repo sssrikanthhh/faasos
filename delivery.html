@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery&Payment</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+            margin: auto;
+            margin-top: 3%;
+        }
+
+        #left {
+            width: 90%;
+        }
+
+        #right {
+            width: 60%;
+            background-color: white;
+            padding: 0.7%;
+        }
+
+        #login {
+            background-color: white;
+            border-radius: 7px;
+            margin-bottom: 7px;
+            padding: 0.7%;
+
+            /* font-weight: bold; */
+        }
+
+        #login>div {
+            display: flex;
+        }
+
+        #delivery {
+            background-color: white;
+            border-radius: 7px;
+            margin-bottom: 7px;
+            padding: 0.7%;
+        }
+        #FreeItem{
+            color: green;
+        }
+
+        #delivery>#add {
+            border: dotted orange;
+            align-items: center;
+            justify-content: center;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        #delivery h4 {
+            margin-left: 20%;
+        }
+
+        #add>button {
+            width: 80%;
+            margin: auto;
+        }
+
+        #button_add {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            display: block;
+            background-color: orange;
+            border-radius: 5px;
+        }
+
+        #detail {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #final {
+            margin-top: 100px;
+        }
+
+        #final>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            background-color: black;
+        }
+
+        #total {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* Payment */
+
+        #payment {
+            background-color: white;
+            border-radius: 7px;
+            padding: 0.7%;
+        }
+
+        #bottomcontainer {
+            width: 100%;
+            /* border: 1px solid grey; */
+            margin: auto;
+        }
+
+        #bottomimage {
+            display: flex;
+            width: 30%;
+        }
+
+        #detailcontainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #leftdetail p {
+            margin-top: 10%;
+        }
+
+        #rightdetail select {
+            margin-top: 10%;
+        }
+
+        input {
+            margin-top: 10%;
+        }
+
+        #placeorder {
+            justify-content: flex-end;
+            display: flex;
+            width: 78%;
+        }
+
+        #placeorder button {
+            background-color: #81a555;
+            color: white;
+        }
+
+        button {
+            /* display: block;
+            margin: auto; */
+            background-color: orange;
+            width: 32%;
+            margin-left: 68%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="login"></div>
+            <div id="delivery">
+                <h3>Delivery Address</h3>
+                <div id="add">
+                    <h4>ADD NEW ADDRESS</h4>
+                    <button id="button_add" onclick="window.location.href='address.html'">
+                        ADD NEW
+                    </button>
+                </div>
+            </div>
+            <div id="payment">
+                <h3>Payment</h3>
+                <div id="bottomcontainer">
+                    <div id="bottomimage">
+                        <img src="https://ztransaction.bongous.com/static/css/images/pm/visa.png" alt="" />
+                        <img src="https://ztransaction.bongous.com/static/css/images/pm/mastercard.png" alt="" />
+                        <img src="https://ztransaction.bongous.com/static/css/images/pm/bitcoin.png" alt="" />
+                    </div>
+                    <div id="detailcontainer">
+                        <div id="leftdetail">
+                            <p>Card Type</p>
+                            <p>Credit Card Number*</p>
+                            <p>Expiration Date*</p>
+                            <p>Security Code*</p>
+                        </div>
+                        <div id="rightdetail">
+                            <div>
+                                <select>
+                                    <option>MASTER CARD</option>
+                                    <option>VISA</option>
+                                    <option>BITCOIN</option>
+                                </select>
+                            </div>
+                            <input type="number" />
+                            <div class="date">
+                                <select name="" id="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <select name="" id="">
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                </select>
+                            </div>
+                            <input type="number" name="" id="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="window.location.href='thankyou.html'" >Proceed Next</button>
+            
+
+        </div>
+        <div id="right">
+            <h3>Order Summary</h3>
+            <img src="Screenshot (443).png" alt="Not Available" />
+            <p id="detail"></p>
+            <div id="final"></div>
+            <hr />
+            <div id="total">
+                <h3 id="Total">Grand Total</h3>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="./delivery.js"></script>
