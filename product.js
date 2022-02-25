@@ -9,9 +9,9 @@
 //     },
 // ];
 
-document.querySelector("button").addEventListener("click", function () {
-    alert("Added to cart");
-    window.location.href = "./HomePage/index.html";
+document.querySelector("#imgDiv").addEventListener("click", function () {
+    // alert("Added to cart");
+    // window.location.href = "./HomePage/index.html";
   });
 
 var displayData = JSON.parse(localStorage.getItem("clicked_Image"))
