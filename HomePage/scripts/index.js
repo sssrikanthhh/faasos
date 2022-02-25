@@ -580,7 +580,7 @@ var foodData = [{
 
 
 
-var data = [];
+var Data = [];
 
 // main data 
    
