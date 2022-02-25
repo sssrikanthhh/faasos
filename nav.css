@@ -144,7 +144,7 @@ border: 1px solid black; */
     background: rgba(128, 128, 128, 0.39)
 }
 #location {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100%;
     width: 40%;
 }
