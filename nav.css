@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    overflow-x: hidden ;
+    height: 100%;
+   
+}
+body{
+    font-family: arial ,snas-serif;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    /* border: 1px solid red; */
+    display: flex;
+    background: #ffffff;
+    width: 99%;
+    height: 100px;
+    position: fixed;
+    z-index: 10;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* border: 1px solid black; */
+}
+#container{
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+    /* border: 1px solid red; */
+    background-color:#F3F3F4
+}
+#sidebarMenu{
+
+   z-index: 150;
+    height: 120%;
+    position: fixed;
+    left: -64px;
+    top: -60px;
+    width: 100%;
+    margin-top: 60px;
+    margin-left:79% ;
+    background: #ffffff;
+    transform: translateX(800px);
+    transition: transform 700ms ease-in-out;
+}
+/* #menu{ */
+    /* position: relative; */
+    /* width: 1200px;
+    height: 100%;
+    border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0);
+} */
+
+#opensidebar:checked ~  #sidebarMenu {
+   transform: translateX(0);
+}
+
+.menu{
+list-style: none;
+padding: 0;
+margin: 0;
+/* width: 800px;
+border: 1px solid black; */
+}
+.menu li{
+    color:#fff;
+}
+.menu li a{
+    color: grey;
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    font-size: 25px;
+   margin-left: 90px;
+   
+}
+.toggle{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top:45px;
+    left: 15px;
+    cursor: pointer;
+    margin-left: 85%;
+   
+
+}
+.spiner{
+
+    height: 3px;
+    background: rgb(73,50,145);
+ 
+}
+.spiner.middle,.spiner.bottom{
+
+     margin-top: 3px; 
+}  
+#opensidebar:checked~.toggle>.spiner.middle{
+    opacity: 0;
+}
+#opensidebar:checked~.toggle>.spiner.top{
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#opensidebar:checked~.toggle>.spiner.spiner.bottom{
+    transform: rotate(-135deg);
+    margin-top: -8px;
+}
+.menu>li:nth-child(1){
+    height: 90px;
+}
+.menu>li>img{
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 47px;
+    margin-right: -68px;
+    margin-right: -76px;
+
+
+}
+#opensidebar:checked~#sidebarMenu>#menu{
+    visibility: hidden;
+}
+
+#opensidebar:checked~.toggle{
+    height: 30px;
+    width: 30px;
+    margin-left: 95%;
+    z-index: 151;
+    
+ }
+ #opensidebar:checked~.toggle>.spiner{
+    background: grey
+
+ }
+ li{
+    display:flex;
+
+}
+.li:hover{
+    background: rgba(128, 128, 128, 0.39)
+}
+#location {
+    border: 1px solid red;
+    height: 100%;
+    width: 40%;
+}
+
+.header>img {
+    padding: 1px;
+    width: 5%;
+    margin-left: 250px;
+}
+
+#locpage {
+
+    width: 500px;
+    height: 700px;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+    top: 15%;
+    margin-left: 35%;
+    background: #ffffff;
+
+
+}
+
+#locationdesk {
+    background-color: rgba(27, 25, 25, 0.301);
+    backdrop-filter: blur();
+    position: fixed;
+    width: 100%;
+    height: 900px;
+    visibility: hidden;
+}
+
+#locationdesk1 {
+    background-color: rgba(27, 25, 25, 0.301);
+    /* backdrop-filter: blur(); */
+    position: fixed;
+    width: 100%;
+    height: 900px;
+    visibility: hidden;
+}
+
+#locationsearch {
+    width: 100%;
+    border: 1px solid rgb(204, 143, 143);
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(255, 255, 255);
+    float: left;
+    width: 80%;
+    outline: none;
+    background: #ffffff;
+}
+
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ffffff;
+    color: rgb(29, 19, 19);
+    font-size: 17px;
+    border: 1px solid rgb(255, 255, 255);
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #e9eaeb;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#Login {
+    width: 540px;
+}
+
+#Login>div>img {
+    width: 45px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 90%;
+}
+
+#Login {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+p {
+
+    margin-left: 12px;
+    margin-top: 44px;
+    font-size: 110%;
+
+}
+
+a {
+    text-decoration: none;
+}
+#Login>div>img{
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+}
+
+/* *************** */
+
+
+
+
+
+
+
+
+    
