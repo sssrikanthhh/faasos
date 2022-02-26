@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delivery&Payment</title>
-    <link rel="stylesheet" href="nav.css">
     <style>
         body {
             background-color: whitesmoke;
@@ -49,20 +48,38 @@
             margin-bottom: 7px;
             padding: 0.7%;
         }
-        #FreeItem{
+
+        #FreeItem {
             color: green;
         }
 
-        #delivery>#add {
+        #deliveryAdd {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2%;
+            /* border: 1px solid red; */
+        }
+
+        #deliveryAdd>#add1 {
             border: dotted orange;
             align-items: center;
             justify-content: center;
-            margin-left: 25%;
-            margin-right: 25%;
+        }
+
+        #deliveryAdd>#add2 {
+            border: dotted orange;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #deliveryAdd button {
+            margin-left: 0px;
+            margin-top: 7%;
+
         }
 
         #delivery h4 {
-            margin-left: 20%;
+            margin: auto;
         }
 
         #add>button {
@@ -164,74 +181,27 @@
 </head>
 
 <body>
-
-    <div class="header">
-    
-        <img src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt="">
-
-        <div id="location">
-
-        </div>
-        <div id="Login">
-            <div window.location.href="login-2.html" id="img"><img src="login.png" alt=""></div>
-            <div id="a"><a href="login-2.html">
-                    <p id ="namedetail" window.location.href="login-2.html">Vikash</p>
-                </a></div>
-        </div>
-    </div>
-    <div id="locationdesk">
-        <div id="locpage">
-            <form class="example" action="/action_page.php">
-                <input type="text" placeholder="Search Location" name="search">
-                <button id="btn" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-
-            <hr style="color: grey;">
-        </div>
-    </div>
-    <div id="locationdesk1">
-
-    </div>
-
-    <input type="checkbox" id="opensidebar">
-    <label for="opensidebar" class="toggle">
-        <div class="spiner top"></div>
-        <div class="spiner middle"></div>
-        <div class="spiner bottom"></div>
-    </label>
-
-    <div id="sidebarMenu" style="display: flex;">
-
-        <ul class="menu">
-            <li></li>
-            <li class="li"><img src="profile.png" alt=""><a href="http://127.0.0.1:5502/profile.html">Profile</a></li>
-            <li class="li"><img src="manage.png" alt=""><a href="http://127.0.0.1:5502/order.html">Manage Orders</a></li>
-            <li class="li"><img src="ad.png" alt=""><a href="profile.html">Manage Addresses</a></li>
-            <li class="li"><img src="payment.png" alt=""><a href="http://127.0.0.1:5502/paymoney.html">Manage Payments</a></li>
-            <li class="li"><img src="help.png" alt=""><a href="#">Help & Support</a></li>
-            <li class="li"><img src="about.png" alt=""><a href="#">About Us</a></li>
-            <li class="li"><img src="party.png" alt=""><a href="#">Party Orders</a></li>
-            <li class="li"><img src="logout.png" alt=""><a href="#" t>Logout</a></li>
-        </ul>
-
-    </div>
-
-
-<!-- ******* -->
-
-
-
-
     <div id="container">
         <div id="left">
             <div id="login"></div>
             <div id="delivery">
                 <h3>Delivery Address</h3>
-                <div id="add">
-                    <h4>ADD NEW ADDRESS</h4>
-                    <button id="button_add" onclick="window.location.href='address.html'">
-                        ADD NEW
-                    </button>
+                <div id="deliveryAdd">
+                    <div id="add1">
+                        <h4>ADD NEW ADDRESS</h4>
+                        <button id="button_add" onclick="window.location.href='address.html'">
+                            ADD NEW
+                        </button>
+                        <div id="add1ap"></div>
+                    </div>
+                    <div id="add2">
+                        <h4>OLD ADDRESS</h4>
+                        <button id="button_add" onclick="window.location.href='address.html'">
+                            SELECT
+                        </button>
+                        
+                        <div id="add2ap"></div>
+                    </div>
                 </div>
             </div>
             <div id="payment">
@@ -285,9 +255,9 @@
                     </div>
                 </div>
             </div>
-            <button onclick="window.location.href='thankyou.html'" >Proceed Next</button>
-            
-
+            <button onclick="window.location.href='thankyou.html'">
+                Proceed Next
+            </button>
         </div>
         <div id="right">
             <h3>Order Summary</h3>
@@ -299,11 +269,61 @@
                 <h3 id="Total">Grand Total</h3>
             </div>
         </div>
-
     </div>
-
 </body>
 
 </html>
 
 <script src="./delivery.js"></script>
+
+<script>
+    var oldAdd = JSON.parse(localStorage.getItem("UserAdd"));
+    const i = oldAdd.length - 1;
+    // console.log("i:", i);
+    displayAdd(oldAdd);
+
+    function displayAdd(ele) {
+        // console.log("i", i);
+
+        var a = document.createElement("p");
+        a.innerHTML = ele[i].name1;
+
+        var b = document.createElement("p");
+        b.innerHTML = ele[i].name2;
+
+        var c = document.createElement("p");
+        c.innerHTML = ele[i].add1;
+
+        var d = document.createElement("p");
+        d.innerHTML = ele[i].state1;
+
+        var e = document.createElement("p");
+        e.innerHTML = ele[i].mobile1;
+
+        var f = document.createElement("p");
+        f.innerHTML = ele[i].country1;
+
+        document.querySelector("#add1ap").append(a, b, c, d, e, f);
+
+        ///////
+        var m = document.createElement("p");
+        m.innerHTML = ele[i - 1].name1;
+
+        var n = document.createElement("p");
+        n.innerHTML = ele[i - 1].name2;
+
+        var o = document.createElement("p");
+        o.innerHTML = ele[i - 1].add1;
+
+        var p = document.createElement("p");
+        p.innerHTML = ele[i - 1].state1;
+
+        var q = document.createElement("p");
+        q.innerHTML = ele[i - 1].mobile1;
+
+        var r = document.createElement("p");
+        r.innerHTML = ele[i - 1].country1;
+
+        document.querySelector("#add2ap").append(m, n, o, p, q, r);
+    }
+</script>
