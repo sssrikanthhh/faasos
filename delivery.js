@@ -39,7 +39,7 @@ function displayData2a(item) {
 
     var div2 = document.createElement("div")
     var div2a = document.createElement("p")
-    div2a.innerHTML = "Tax"
+    div2a.innerHTML = "Discount"
 
     var div2b = document.createElement("p")
     div2b.innerHTML = "₹ 12"
