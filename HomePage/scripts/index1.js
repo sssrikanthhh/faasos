@@ -732,6 +732,7 @@ var Data = [];
 
            var remove = document.createElement("p");
            remove.textContent = "Remove";
+           remove.id = "remove_btn"
            
            
            remove.addEventListener("click",function(){
@@ -784,7 +785,7 @@ veg_filter.oninput = () => {
     }
     else{
         console.log(0);
-        window.location.href = "index.html";
+        window.location.href = "index1.html";
     }
     console.log(veg_data);
 
@@ -801,7 +802,7 @@ non_veg_filter.oninput = () => {
         });
     }
     else{
-        window.location.href = "index.html";
+        window.location.href = "index1.html";
     }
     console.log(Non_veg_data)
     displayData(Non_veg_data);

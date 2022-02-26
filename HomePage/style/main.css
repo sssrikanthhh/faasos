@@ -183,6 +183,9 @@ width: 75%;
     /* border: 2px solid red; */
     
 }
+#remove_btn{
+    cursor: pointer;
+}
 #loc1{
     background-color: rgb(27,25,25,0.301);
     backdrop-filter: blur();
