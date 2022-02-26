@@ -2,153 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Address</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
-        #done {
-            display: block;
-            margin: auto;
-            background-color: orange;
+        #address {
+            display: flex;
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid red; */
         }
 
-        #container {
-            width: 50%;
-            margin: auto;
+        #left p {
+            margin-top: -3%;
+        }
+
+        #address>#left {
+            margin-top: -1%;
+            /* border: 1px solid red*/
+        }
+
+        #address>#right {
+            margin-top: 1%;
+            margin-left: 10%;
             /* border: 1px solid red; */
+        }
+
+        #address input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6%;
+        }
+
+        #address select {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6%;
+        }
+
+        #Done {
+            background-color: orange;
+            display: block;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
-
-
-    <div id="container">
-
-        <div>
-            <h3>Shipping Address:-</h3>
+    <div id="address">
+        <div id="left">
+            <p>First Name</p>
+            <p>Last name</p>
+            <p>Email</p>
+            <p>Contact number</p>
+            <p>Address</p>
+            <p>Landmark</p>
+            <p>State</p>
+            <p>ZipCode</p>
+            <p>Country</p>
         </div>
 
-        <label for="name">First Name</label>
-        <input id="name1" type="text" class="form-control" placeholder="Enter first name">
+        <div id="right">
+            <form>
+                <input id="Fname" type="text" placeholder="Enter First name" />
+                <input id="Lname" type="text" placeholder="Enter last name" />
+                <input id="mail" type="text" placeholder="xyz@example.com" />
+                <input id="mobile" type="number" placeholder="Enter mobile number" />
+                <input id="add" type="text" placeholder="Addresss line" />
+                <input id="land" type="text" placeholder="Landmark" />
 
-        <div class="col">
-            <label for="name">Last Name</label>
-            <input id="name2" type="text" class="form-control" placeholder="Enter last name">
-
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-                <label for="email">Email</label>
-                <input id="mail" type="text" class="form-control" placeholder="xyz@example.com">
-            </div>
-        </div>
-
-        <div class="row">
-            <label for="username">Contact Number</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">+91</div>
-                </div>
-                <input id="mobile" type="text" class="form-control" placeholder="Enter mobile number">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <label for="address">Address</label>
-                <input id="add" type="text" class="form-control" placeholder="Enter address here">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <label for="address">Landmark</label>
-                <input id="Land" type="text" class="form-control" placeholder="Enter Landmark">
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="form-group col-md-3">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option id="State" value="1">Maharashtra</option>
+                <select name="" id="state">
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Delhi"></option>
+                    <option value="U.P."></option>
                 </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputZip">Zip Code</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
 
+                <input id="code" type="number" placeholder="ZipCode" />
+
+                <select name="" id="country">
+                    <option value="India">India</option>
+                </select>
+                <input id="Done" type="submit" value="DONE" />
+            </form>
         </div>
-        <div class="form-group col-md-3">
-            <label for="inputState">Country...</label>
-            <select id="Country" class="form-control">
-                <option selected>Choose...</option>
-                <option value="1">India</option>
-                <option value="2">Brazil</option>
-                <option value="3">Germany</option>
-            </select>
-        </div>
-
-        <hr>
-        <button id="done" onclick="window.location.href='delivery.html'">Done</button>
-
     </div>
-
-
-
 </body>
 
 </html>
 
 <script>
+    document.querySelector("form").addEventListener("submit", formSubmit);
 
-document.getElementById("form").addEventListener("submit", formsubmit)
+    var userStack = JSON.parse(localStorage.getItem("UserAdd")) || [];
 
-function formsubmit(event){
-    event.preventDefault()
-    var Fname = document.getElementById("name1").value
-    var Lname = document.getElementById("name2").value
+    function formSubmit(event) {
+        event.preventDefault();
 
-    var email = document.getElementById("mail").value
-    var number = document.getElementById("mobile").value
+        var Fname = document.getElementById("Fname").value;
+        var Lname = document.getElementById("Lname").value;
+        var mail = document.getElementById("mail").value;
+        var mobile = document.getElementById("mobile").value;
+        var add = document.getElementById("add").value;
+        var land = document.getElementById("land").value;
+        var state = document.getElementById("state").value;
+        var code = document.getElementById("code").value;
+        var country = document.getElementById("country").value;
 
-    var adds = document.getElementById("add").value
-    var Landmrk = document.getElementById("Land").value
+        var userData = {
+            name1: Fname,
+            name2: Lname,
+            mail1: mail,
+            mobile1: mobile,
+            add1: add,
+            land1: land,
+            state1: state,
+            code1: code,
+            country1: country,
+        };
 
-    var state = document.getElementById("State").value
-    var areacode = document.getElementById("inputZip").value
-    var country = document.getElementById("Country").value
+        userStack.push(userData);
 
-    let userdetails = JSON.parse(localStorage.getItem("form")) || []
-
-}
-    
-    let address = [
-        {
-           Firstname: Fname,
-            Lastname: Lname,
-            Email: email,
-            Mobile: number,
-            Adds: adds,
-            Location: Landmrk,
-            State : state,
-            Code: areacode,
-            Country : country
-
-        }
-    ]
-
-    userdetails.push(address)
-
-    localStorage.setItem("form", JSON.stringify(address))
-
+        localStorage.setItem("UserAdd", JSON.stringify(userStack));
+        alert("Submitted Successfully");
+        window.location.href = "delivery.html";
+    }
 </script>
